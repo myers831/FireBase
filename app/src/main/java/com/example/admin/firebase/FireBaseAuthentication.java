@@ -79,6 +79,12 @@ public class FireBaseAuthentication extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+        Intent intent = getIntent();
+
+        if(intent.getStringExtra("aaaa")!=null){
+            Log.d(TAG, "onCreate: " + intent.getStringExtra("aaaa"));
+        }
+
         FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
 
