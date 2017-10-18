@@ -31,7 +31,6 @@ public class FireBaseRealTimeDataBase extends AppCompatActivity {
     EditText etMovieName, etMovieDirector, etMovieProducer;
 
     FirebaseUser user;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +43,6 @@ public class FireBaseRealTimeDataBase extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         movieRef = database.getReference("movies");
 
-         user = FirebaseAuth.getInstance().getCurrentUser();
     }
 
     public void saveMovie(View view) {

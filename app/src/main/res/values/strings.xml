@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">FireBase</string>
     <string name="auth_failed">Authintication Failed</string>
+    <string name="facebook_app_id">133675037286312</string>
+    <string name="fb_login_protocol_scheme">fb133675037286312</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">ARZsDQrAbDT4q3scdizUdKhfY</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">CRGV2Xylg2QchQZYO5AecbCiO0ufDFp5daZwLwm4AiDFgGYzn9</string>
 </resources>
