@@ -69,13 +69,6 @@ public class FireBaseAuthentication extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        FirebaseApp.initializeApp(this);
-        mAuth = FirebaseAuth.getInstance();
-
-        etEmail = (EditText) findViewById(R.id.etEmail);
-        etPassword = (EditText) findViewById(R.id.etPassword);
 
         TwitterConfig config = new TwitterConfig.Builder(this)
                 .logger(new DefaultLogger(Log.DEBUG))
@@ -83,6 +76,14 @@ public class FireBaseAuthentication extends AppCompatActivity {
                 .debug(true)
                 .build();
         Twitter.initialize(config);
+
+        setContentView(R.layout.activity_main);
+
+        FirebaseApp.initializeApp(this);
+        mAuth = FirebaseAuth.getInstance();
+
+        etEmail = (EditText) findViewById(R.id.etEmail);
+        etPassword = (EditText) findViewById(R.id.etPassword);
 
         mLoginButton = (TwitterLoginButton) findViewById(R.id.button_twitter_login);
         mLoginButton.setCallback(new Callback<TwitterSession>() {
